@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ru.sbrf.serviceFactorialTest.ServiceFactorialRestTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.134 s - in ru.sbrf.serviceFactorialTest.ServiceFactorialRestTest

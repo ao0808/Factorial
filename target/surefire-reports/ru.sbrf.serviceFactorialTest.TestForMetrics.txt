@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: ru.sbrf.serviceFactorialTest.TestForMetrics
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.05 s - in ru.sbrf.serviceFactorialTest.TestForMetrics
