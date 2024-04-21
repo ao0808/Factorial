@@ -5,6 +5,6 @@ RUN apt-get update && \
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
-RUN mvn clean package -DskipTests -U
+RUN mvn clean package -U
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "/app/target/factorial-1.0-SNAPSHOT.jar"]
