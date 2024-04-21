@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.sbrf.serviceFactorial.model.FactorialRequest;
 import ru.sbrf.serviceFactorial.model.FactorialResponse;
 import ru.sbrf.serviceFactorial.service.CalculateFactorialWithMetrics;
-
 import javax.validation.Valid;
-
 
 @RestController
 public class Controller {

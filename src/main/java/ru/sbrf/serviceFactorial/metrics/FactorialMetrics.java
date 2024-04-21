@@ -1,14 +1,13 @@
 package ru.sbrf.serviceFactorial.metrics;
+
 import io.micrometer.core.instrument.MeterRegistry;
 import io.micrometer.core.instrument.Timer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.concurrent.TimeUnit;
 
 @Component
 public class FactorialMetrics {
-
     private final MeterRegistry meterRegistry;
     private final Timer factorialTimer;
 

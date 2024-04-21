@@ -8,7 +8,7 @@ import ru.sbrf.serviceFactorial.metrics.FactorialMetrics;
 @Component
 public class CalculateFactorialWithMetrics implements CalculateFactorialInterface {
     private final FactorialMetrics factorialMetrics;
-    private CalculateFactorial calculateFactorial;
+    private final CalculateFactorial calculateFactorial;
     @Autowired
     public CalculateFactorialWithMetrics(FactorialMetrics factorialMetrics, CalculateFactorial calculateFactorial) {
         this.factorialMetrics = factorialMetrics;
