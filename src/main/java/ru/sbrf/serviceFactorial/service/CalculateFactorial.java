@@ -1,9 +1,7 @@
 package ru.sbrf.serviceFactorial.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.sbrf.serviceFactorial.interfaces.CalculateFactorialInterface;
-import ru.sbrf.serviceFactorial.metrics.FactorialMetrics;
 
 @Service
 public class CalculateFactorial implements CalculateFactorialInterface {

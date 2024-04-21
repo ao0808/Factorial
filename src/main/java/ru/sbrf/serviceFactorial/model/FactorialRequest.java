@@ -1,19 +1,12 @@
 package ru.sbrf.serviceFactorial.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class FactorialRequest {
     private int factorialNum;
-
-    public FactorialRequest() {}
-
-    public FactorialRequest(int factorialNum) {
-        this.factorialNum = factorialNum;
-    }
-
-    public int getFactorialNum() {
-        return factorialNum;
-    }
-
-    public void setFactorialNum(int factorialNum) {
-        this.factorialNum = factorialNum;
-    }
 }
