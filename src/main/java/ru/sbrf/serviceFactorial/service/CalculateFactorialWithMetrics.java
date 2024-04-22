@@ -9,11 +9,13 @@ import ru.sbrf.serviceFactorial.metrics.FactorialMetrics;
 public class CalculateFactorialWithMetrics implements CalculateFactorialInterface {
     private final FactorialMetrics factorialMetrics;
     private final CalculateFactorial calculateFactorial;
+
     @Autowired
     public CalculateFactorialWithMetrics(FactorialMetrics factorialMetrics, CalculateFactorial calculateFactorial) {
         this.factorialMetrics = factorialMetrics;
         this.calculateFactorial = calculateFactorial;
     }
+
     @Override
     public double calculate(int factorialNum) {
         long startTime = System.currentTimeMillis();

@@ -14,14 +14,12 @@ import ru.sbrf.serviceFactorial.Application;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Application.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class ServiceFactorialRestTest extends Assert {
-
     private static final String API_ROOT = "http://localhost:8080/factorial";
     @Autowired
     private TestRestTemplate restTemplate;
 
-
     @Test
-    public void ServiceTest(){
+    public void ServiceTest() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         String requestBody = "{\"factorialNum\": 5}";
@@ -30,12 +28,11 @@ public class ServiceFactorialRestTest extends Assert {
         ResponseEntity<String> response = restTemplate.postForEntity(API_ROOT, request, String.class);
 
         Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
-        Assertions.assertEquals("{\"result\":120.0}",response.getBody());
+        Assertions.assertEquals("{\"result\":120.0}", response.getBody());
     }
 
-
     @Test
-    public void ServiceZeroTest(){
+    public void ServiceZeroTest() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         String requestBody = "{\"factorialNum\": 0}";
@@ -44,11 +41,11 @@ public class ServiceFactorialRestTest extends Assert {
         ResponseEntity<String> response = restTemplate.postForEntity(API_ROOT, request, String.class);
 
         Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
-        Assertions.assertEquals("{\"result\":1.0}",response.getBody());
+        Assertions.assertEquals("{\"result\":1.0}", response.getBody());
     }
 
     @Test
-    public void ServiceBadRequestTest(){
+    public void ServiceBadRequestTest() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         String requestBody = "{\"factorialNum\": 101}";
@@ -60,7 +57,7 @@ public class ServiceFactorialRestTest extends Assert {
     }
 
     @Test
-    public void ServiceNegativeTest(){
+    public void ServiceNegativeTest() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         String requestBody = "{\"factorialNum\": -1}";
@@ -72,7 +69,7 @@ public class ServiceFactorialRestTest extends Assert {
     }
 
     @Test
-    public void ServiceBadRequestNegativeTest(){
+    public void ServiceBadRequestNegativeTest() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         String requestBody = "{\"factorialNum\": -100}";
@@ -82,8 +79,9 @@ public class ServiceFactorialRestTest extends Assert {
 
         Assertions.assertEquals(HttpStatus.BAD_REQUEST, response.getStatusCode());
     }
+
     @Test
-    public void ServiceBadRequestNullTest(){
+    public void ServiceBadRequestNullTest() {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         HttpEntity<String> request = new HttpEntity<>(null, headers);
